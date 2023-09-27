@@ -1,5 +1,6 @@
+## Problem Statement
 Design a small parking management application which can be used for parking lot owners. 
-The application will have below mentioned features –
+The application will have below mentioned features
 
 1. There will be three different types of parking slots Small, Medium, Large
 2. All parking slots are numbered from 1 to 100
@@ -23,3 +24,18 @@ a console application or a web application. The application needs to be highly s
 testable and loosely coupled application. Please write unit test cases using any of the test
 automation framework like NUnit, XUnit, etc. Please submit your assignment by creating a Git
 repository and providing the access to the same.
+
+## ***Consideration***
+<br>For points 2 and 3 I have taken Total -> 10 where Small -> 5, Medium -> 3 and Large -> 2
+Just for the sake of pictorial view in the console window.
+Though these values/configurations are really scalable, Navigate to `ParkingManagementService.ParkingSlotsSize` enum and change your value 
+<br> **Total = Small + Medium + Large** <br> Scalability Like `Total = Mini + Small + Medium + Large` or `Total = Mini + Small + Medium + Large + ExtraLarge` is possible
+```csharp
+public enum ParkingSlotsSize
+{
+    Total = 10,
+    Small = 5,
+    Medium = 3,
+    Large = 2
+}
+```
