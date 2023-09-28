@@ -2,6 +2,10 @@
 
 namespace ParkingManagementApplication;
 
+/// <summary>
+/// This is a starting point for console application 
+/// Service ParkingManagementService is fully abstracted and can easily plug into any UI
+/// </summary>
 public class ParkingManagementServiceConsoleCallingClient
 {
     public static void CallMe()
