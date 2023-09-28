@@ -6,7 +6,7 @@
 /// For now we have five different types of vehicle so we have group them with specific size
 /// Again It's very easy to extend and accommodate different sizes and different types of vehicle in future like Auto/Bike -> MiniVehicle OR Trucks -> ExtraLargeVehicle
 /// </summary>
-public class VehiclesCategories
+public class VehiclesCategories : IVehiclesCategories
 {
     /// <summary>
     /// This describes type of vehicle.    

@@ -3,7 +3,7 @@
 /// <summary>
 /// This will have a entire blueprint of parking lot
 /// </summary>
-public class ParkingManagementService
+public class ParkingManagementService : IParkingManagementService
 {
     /// <summary>
     /// This will have a entire blueprint of parking lot
@@ -34,16 +34,16 @@ public class ParkingManagementService
             .Where(x => x.VehicleSize == vehiclesCategory?.VehicleSize).FirstOrDefault()?.ParkingSlotsSizes;
 
         List<ParkingSlot> availableSlots = GetAvailableSlots();
-
-        foreach (var slotSize in parkingSlots!)
-        {
-            var check = availableSlots.Where(x => x.ParkingSlotsSize == slotSize).FirstOrDefault();
-            if (check != null)
+        if (parkingSlots != null)
+            foreach (var slotSize in parkingSlots!)
             {
-                check.IsOccupied = true; // update in parent variable
-                return check.SlotNumber;
+                var check = availableSlots.Where(x => x.ParkingSlotsSize == slotSize).FirstOrDefault();
+                if (check != null)
+                {
+                    check.IsOccupied = true; // update in parent variable
+                    return check.SlotNumber;
+                }
             }
-        }
         return -1; // No available slot for the specified vehicle type
     }
 

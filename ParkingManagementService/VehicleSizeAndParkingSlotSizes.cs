@@ -8,7 +8,7 @@
 /// So business rule will be for small car is to look for P1 if full go to P2 if full go to P3 if full say no parking available 
 /// Again It's very easy to extend and accommodate different slots sizes and different types of vehicles they can accommodate
 /// </summary>
-public class VehicleSizeAndParkingSlotSizes
+public class VehicleSizeAndParkingSlotSizes : IVehicleSizeAndParkingSlotSizes
 {
     /// <summary>
     /// This describes the sizes of vehicle which can fit in ParkingSlotsSizes
